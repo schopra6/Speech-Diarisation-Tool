@@ -9,5 +9,5 @@ while read file; do
   echo "new file name ${file%.sph}.wav"
   newfile=${file%.sph}.wav
   echo "$newfile"
-  ffmpeg -i $file $newfile
+  < /dev/null ffmpeg -i $file $newfile
 done <directory.txt
